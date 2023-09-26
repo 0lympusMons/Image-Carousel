@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-container {
+  width: 30%;
+  margin: auto;
+}
+.carousel-container .image-carousel {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+.carousel-container .image-carousel img {
+  width: 100%;
+  transition: 0.5s;
+  position: absolute;
+}
+.carousel-container .image-carousel img.from-left {
+  transform: translateX(-100%);
+  z-index: 100;
+}
+.carousel-container .image-carousel img.from-right {
+  transform: translateX(100%);
+}
+.carousel-container .image-carousel img.active {
+  transform: translateX(0);
+  transition: 0.5s;
+}
+.carousel-container .image-carousel img:hover {
+  transform: translateX(0);
+  transition: 1s;
+}
+
+.nav-links .nav-circle {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px #fff solid;
+  background-color: #333;
+  opacity: 0.8;
+  margin: 0 10px 0 10px;
+  cursor: pointer;
+}
+.nav-links .nav-circle.active {
+  background-color: #fff;
+  border: 1px #333 solid;
+}/*# sourceMappingURL=styles.css.map */
