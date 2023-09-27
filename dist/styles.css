@@ -6,9 +6,18 @@
   padding: 0;
 }
 
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+}
+
 .carousel-container {
   width: 30%;
   margin: auto;
+  position: relative;
 }
 .carousel-container .image-carousel {
   display: flex;
@@ -17,26 +26,52 @@
 }
 .carousel-container .image-carousel img {
   width: 100%;
-  transition: 0.5s;
   position: absolute;
 }
-.carousel-container .image-carousel img.from-left {
-  transform: translateX(-100%);
-  z-index: 100;
+.carousel-container .image-carousel img.to-left {
+  opacity: 0;
+  transition: 0.5s;
 }
-.carousel-container .image-carousel img.from-right {
+.carousel-container .image-carousel img.to-right {
   transform: translateX(100%);
+  opacity: 0;
+  transition: 0.5s;
 }
 .carousel-container .image-carousel img.active {
+  opacity: 1;
   transform: translateX(0);
   transition: 0.5s;
 }
-.carousel-container .image-carousel img:hover {
-  transform: translateX(0);
-  transition: 1s;
+
+.button {
+  color: white;
+  opacity: 0.8;
+  text-shadow: 1px 1px 2px black;
+  cursor: pointer;
+}
+.button#prevBtn {
+  position: absolute;
+  left: 5%;
+  top: 50%;
+}
+.button#nextBtn {
+  position: absolute;
+  right: 5%;
+  top: 50%;
 }
 
-.nav-links .nav-circle {
+.nav-links {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.nav-links li {
+  list-style: none;
+}
+.nav-links li .nav-circle {
   display: inline-block;
   height: 20px;
   width: 20px;
@@ -47,7 +82,7 @@
   margin: 0 10px 0 10px;
   cursor: pointer;
 }
-.nav-links .nav-circle.active {
+.nav-links li .nav-circle.active {
   background-color: #fff;
   border: 1px #333 solid;
 }/*# sourceMappingURL=styles.css.map */

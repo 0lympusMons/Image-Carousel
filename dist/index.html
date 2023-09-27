@@ -7,6 +7,7 @@
     <title>Image Carousel</title>
     <link rel="stylesheet" href="./styles.css">
     <script src="./app.js" defer></script>
+    <script src="https://kit.fontawesome.com/a8f9f6d255.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -14,21 +15,25 @@
     <div class="carousel-container">
         <div class="image-carousel">
             <!-- <img src="./images/img3.jpg" class="from-left" id="lastClone" alt=""> -->
-            <img src="./images/img1.jpg" class="from-right" id="img1" alt="">
-            <img src="./images/img2.jpg" class="from-right" id="img2" alt="">
-            <img src=" ./images/img3.jpg" class="from-right"  id="img3" alt="">
+            <img src="./images/img1.jpg" class="" id="img1" alt="">
+            <img src="./images/img2.jpg" class="to-right" id="img2" alt="">
+            <img src=" ./images/img3.jpg" class="to-right"  id="img3" alt="">
             <!-- <img src="./images/img1.jpg" class="from-right" id="firstClone" alt=""> -->
         </div>
+<!-- 
+        <button id="prevBtn">Prev</button>
+        <button id="nextBtn">Next</button> -->
+        <i class="fa-solid fa-arrow-left button fa-2x" id="prevBtn"></i>
+        <i class="fa-solid fa-arrow-right button fa-2x" id="nextBtn"></i>
+    
+        <ul class="nav-links">
+            <li><div class="nav-circle"></div></li>
+            <li><div class="nav-circle"></div></li>
+            <li><div class="nav-circle"></div></li>
+        </ul>
     </div>
 
-    <button id="prevBtn">Prev</button>
-    <button id="nextBtn">Next</button>
 
-    <ul class="nav-links">
-        <li><div class="nav-circle"></div></li>
-        <li><div class="nav-circle"></div></li>
-        <li><div class="nav-circle"></div></li>
-    </ul>
 </body>
 
 </html>
